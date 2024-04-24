@@ -6,7 +6,6 @@ import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom'
 import GlobalPage from './pages/GlobalPage'
 import TokenPage from './pages/TokenPage'
 import PairPage from './pages/PairPage'
-import Link from './components/Link'
 import { useGlobalData, useGlobalChartData } from './contexts/GlobalData'
 import { isAddress } from './utils'
 import AccountPage from './pages/AccountPage'
@@ -78,19 +77,6 @@ const WarningBanner = styled.div`
   font-weight: 500;
 `
 
-const UrlBanner = styled.div`
-  background-color: #ff007a;
-  padding: 1rem;
-  color: white;
-  width: 100%;
-  text-align: center;
-  font-weight: 500;
-`
-
-const Decorator = styled.span`
-  text-decoration: underline;
-`
-
 /**
  * Wrap the component with the header and sidebar pinned tab
  */
@@ -124,14 +110,6 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <AppWrapper>
-        <BannerWrapper>
-          <UrlBanner>
-            {`Explore the new combinved V2 and V3 analytics at `}
-            <Link color="white" external href={'https://app.uniswap.org/explore'}>
-              <Decorator>app.uniswap.org</Decorator>
-            </Link>{' '}
-          </UrlBanner>
-        </BannerWrapper>
         {showWarning && (
           <BannerWrapper>
             <WarningBanner>
@@ -140,9 +118,9 @@ function App() {
           </BannerWrapper>
         )}
         {globalData &&
-        Object.keys(globalData).length > 0 &&
-        globalChartData &&
-        Object.keys(globalChartData).length > 0 ? (
+          Object.keys(globalData).length > 0 &&
+          globalChartData &&
+          Object.keys(globalChartData).length > 0 ? (
           <BrowserRouter>
             <Route component={GoogleAnalyticsReporter} />
             <Switch>

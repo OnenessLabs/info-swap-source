@@ -22,6 +22,7 @@ WrappedLink.propTypes = {
 
 const Link = styled(WrappedLink)`
   color: ${({ color, theme }) => (color ? color : theme.link)};
+  font-weight: bold;
 `
 
 export default Link
@@ -29,7 +30,8 @@ export default Link
 export const CustomLink = styled(RouterLink)`
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
+  fontWeight: 
   color: ${({ color, theme }) => (color ? color : theme.link)};
 
   &:visited {
