@@ -672,6 +672,7 @@ export function Updater() {
     async function getData() {
       // get top pairs for overview list
       let topTokens = await getTopTokens(ethPrice, ethPriceOld)
+      console.info("topTokens:",topTokens)
       topTokens && updateTopTokens(topTokens)
     }
     ethPrice && ethPriceOld && getData()
@@ -680,6 +681,7 @@ export function Updater() {
 }
 
 export function useTokenData(tokenAddress) {
+  console.info("useTokenData")
   const [state, { update }] = useTokenDataContext()
   const [ethPrice, ethPriceOld] = useEthPrice()
   const tokenData = state?.[tokenAddress]
@@ -696,6 +698,7 @@ export function useTokenData(tokenAddress) {
 }
 
 export function useTokenTransactions(tokenAddress) {
+  console.info("useTokenTransactions")
   const [state, { updateTokenTxns }] = useTokenDataContext()
   const tokenTxns = state?.[tokenAddress]?.txns
 
@@ -720,6 +723,7 @@ export function useTokenTransactions(tokenAddress) {
 }
 
 export function useTokenPairs(tokenAddress) {
+  console.info("useTokenPairs")
   const [state, { updateAllPairs }] = useTokenDataContext()
   const tokenPairs = state?.[tokenAddress]?.[TOKEN_PAIRS_KEY]
 
@@ -874,6 +878,7 @@ export function useTokenPriceData(tokenAddress, timeWindow, interval = 3600) {
 }
 
 export function useAllTokenData() {
+  console.info("useAllTokenData")
   const [state] = useTokenDataContext()
 
   // filter out for only addresses

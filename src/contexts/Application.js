@@ -271,6 +271,7 @@ export function useListedTokens() {
     async function fetchList() {
       const allFetched = await SUPPORTED_LIST_URLS__NO_ENS.reduce(async (fetchedTokens, url) => {
         const tokensSoFar = await fetchedTokens
+        console.log(url)
         const newTokens = await getTokenList(url)
         if (newTokens?.tokens) {
           return Promise.resolve([...tokensSoFar, ...newTokens.tokens])
