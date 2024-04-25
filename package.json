@@ -72,7 +72,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:docker:local": "docker run -p 8080:80 oneness-info:local",
     "build": "react-scripts build",
+    "build:docker": "docker build -t oneness-info:local ./",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

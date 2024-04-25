@@ -21,7 +21,7 @@ const theme = (darkMode, color) => ({
 
   concreteGray: darkMode ? '#292C2F' : '#FAFAFA',
   inputBackground: darkMode ? '#1F1F1F' : '#FAFAFA',
-  shadowColor: darkMode ? '#000' : '#2F80ED',
+  shadowColor: darkMode ? '#000' : '#FAD230',
   mercuryGray: darkMode ? '#333333' : '#E1E1E1',
 
   text1: darkMode ? '#FAFAFA' : '#1F1F1F',
@@ -48,21 +48,21 @@ const theme = (darkMode, color) => ({
   divider: darkMode ? 'rgba(43, 43, 43, 0.435)' : 'rgba(43, 43, 43, 0.035)',
 
   //primary colors
-  primary1: darkMode ? '#D6B635' : '#FAD230',
-  primary2: darkMode ? '#EEBF00' : '#FF8CC3',
-  primary3: darkMode ? '#FAD230' : '#FF99C9',
-  primary4: darkMode ? '#EED053' : '#F6DDE8',
-  primary5: darkMode ? '#F1DC85' : '#FDEAF1',
+  primary1: darkMode ? '#D6B635' : '#D6B635',
+  primary2: darkMode ? '#EEBF00' : '#EEBF00',
+  primary3: darkMode ? '#FAD230' : '#FAD230',
+  primary4: darkMode ? '#EED053' : '#EED053',
+  primary5: darkMode ? '#F1DC85' : '#F1DC85',
 
   // color text
-  primaryText1: darkMode ? '#6da8ff' : '#FAD230',
+  primaryText1: darkMode ? '#FAD230' : '#FAD230',
 
   // secondary colors
   secondary1: darkMode ? '#EED053' : '#FAD230',
   secondary2: darkMode ? '#17000b26' : '#F6DDE8',
   secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 
-  shadow1: darkMode ? '#000' : '#2F80ED',
+  shadow1: darkMode ? '#000' : '#FAD230',
 
   // other
   red1: '#FF6871',
@@ -70,7 +70,7 @@ const theme = (darkMode, color) => ({
   yellow1: '#FFE270',
   yellow2: '#F3841E',
   link: '#EED053',
-  blue: '2f80ed',
+  blue: '#FAD230',
 
   background: darkMode ? 'black' : `radial-gradient(50% 50% at 50% 50%, #D6B63530 0%, #fff 0%)`,
 })
