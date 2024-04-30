@@ -4,7 +4,7 @@ import { HttpLink } from 'apollo-link-http'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri:'https://subgraph.devnet.onenesslabs.io/subgraphs/name/oneness/oneswap',
+    uri: 'https://subgraph.devnet.onenesslabs.io/subgraphs/name/oneness/oneswap',
     // uri: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v2-dev',
   }),
   cache: new InMemoryCache(),
@@ -39,7 +39,7 @@ export const stakingClient = new ApolloClient({
 export const blockClient = new ApolloClient({
   link: new HttpLink({
     // uri: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
-    uri:'https://subgraph.devnet.onenesslabs.io/subgraphs/name/blocklytics/ethereum-blocks',
+    uri: 'https://subgraph.devnet.onenesslabs.io/subgraphs/name/blocklytics/ethereum-blocks',
   }),
   cache: new InMemoryCache(),
 })

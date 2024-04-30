@@ -421,7 +421,7 @@ function TokenPage({ address, history }) {
                   </Column>
                   <ButtonLight color={backgroundColor}>
                     <Link color={backgroundColor} external href={'https://scan.devnet.onenesslabs.io/address/' + address}>
-                      View on Etherscan ↗
+                      View on Oneness scan ↗
                     </Link>
                   </ButtonLight>
                 </TokenDetailsLayout>

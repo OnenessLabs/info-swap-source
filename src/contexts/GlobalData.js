@@ -467,7 +467,7 @@ const getGlobalTransactions = async () => {
 }
 
 /**
- * Gets the current price  of ETH, 24 hour price, and % change between them
+ * Gets the current price  of BTC, 24 hour price, and % change between them
  */
 const getEthPrice = async () => {
   const utcCurrentTime = dayjs()
@@ -710,7 +710,7 @@ export function useTopLps() {
             if (results) {
               return results.liquidityPositions
             }
-          } catch (e) {}
+          } catch (e) { }
         })
       )
 

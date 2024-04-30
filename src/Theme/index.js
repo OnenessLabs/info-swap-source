@@ -144,9 +144,7 @@ export const ThemedBackground = styled.div`
   max-width: 100vw !important;
   height: 200vh;
   mix-blend-mode: color;
-  background: ${(em) => {
-    const { backgroundColor } = em
-    console.log(em)
+  background: ${({ backgroundColor }) => {
     return `radial-gradient(50% 50% at 50% 50%, ${backgroundColor} 0%, rgba(255, 255, 255, 0) 100%)`
   }};
   position: absolute;
@@ -184,48 +182,73 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  
-.three-line-legend {
-	width: 100%;
-	height: 70px;
-	position: absolute;
-	padding: 8px;
-	font-size: 12px;
-	color: #20262E;
-	background-color: rgba(255, 255, 255, 0.23);
-	text-align: left;
-	z-index: 10;
-  pointer-events: none;
-}
+  input[type=checkbox]{
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    position: relative;
+  }
+  input[type=checkbox]::after {
+    position: absolute;
+    top: 0;
+    color: #000;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    visibility: visible;
+    padding-left: 0px;
+    text-align: center;
+    content: ' ';
+    border-radius: 3px;
+  }
+  input[type=checkbox]:checked::after {
+    content: "✓";
+    color: #fff;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: #EEBF00;
+  }
 
-.three-line-legend-dark {
-	width: 100%;
-	height: 70px;
-	position: absolute;
-	padding: 8px;
-	font-size: 12px;
-	color: white;
-	background-color: rgba(255, 255, 255, 0.23);
-	text-align: left;
-	z-index: 10;
-  pointer-events: none;
-}
-
-@media screen and (max-width: 800px) {
   .three-line-legend {
-    display: none !important;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    padding: 8px;
+    font-size: 12px;
+    color: #20262E;
+    background-color: rgba(255, 255, 255, 0.23);
+    text-align: left;
+    z-index: 10;
+    pointer-events: none;
   }
-}
 
-.tv-lightweight-charts{
-  width: 100% !important;
-  
+  .three-line-legend-dark {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    padding: 8px;
+    font-size: 12px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.23);
+    text-align: left;
+    z-index: 10;
+    pointer-events: none;
+  }
 
-  & > * {
+  @media screen and (max-width: 800px) {
+    .three-line-legend {
+      display: none !important;
+    }
+  }
+
+  .tv-lightweight-charts{
     width: 100% !important;
-  }
-}
+    
 
+    & > * {
+      width: 100% !important;
+    }
+  }
 
   html {
     font-size: 1rem;
