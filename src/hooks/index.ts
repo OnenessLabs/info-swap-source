@@ -8,9 +8,9 @@ import copy from "copy-to-clipboard";
 export function useColor(tokenAddress, token) {
   const [color, setColor] = useState("#EED053");
   if (tokenAddress) {
-    const path = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${isAddress(
+    const path = `https://raw.githubusercontent.com/OnenessLabs/token-list/main/Tokens/${isAddress(
       tokenAddress
-    )}/logo.png`;
+    )}/logo.svg`;
     if (path) {
       Vibrant.from(path).getPalette((err, palette) => {
         if (palette && palette.Vibrant) {

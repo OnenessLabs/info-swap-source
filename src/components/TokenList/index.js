@@ -122,7 +122,6 @@ const SORT_FIELD = {
 
 // @TODO rework into virtualized list
 function TopTokenList({ tokens, itemMax = 10, useTracked = false }) {
-  console.info(tokens)
   // page state
   const [page, setPage] = useState(1)
   const [maxPage, setMaxPage] = useState(1)

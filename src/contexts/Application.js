@@ -180,7 +180,7 @@ export function useLatestBlocks() {
         })
         .then((res) => {
           const syncedBlock = res.data.indexingStatusForCurrentVersion?.chains[0]?.latestBlock?.number
-          const headBlock = res.data.indexingStatusForCurrentVersion.chains[0].chainHeadBlock.number
+          const headBlock = res.data.indexingStatusForCurrentVersion?.chains[0]?.chainHeadBlock?.number
           if (syncedBlock && headBlock) {
             updateLatestBlock(syncedBlock)
             updateHeadBlock(headBlock)
@@ -271,7 +271,6 @@ export function useListedTokens() {
     async function fetchList() {
       const allFetched = await SUPPORTED_LIST_URLS__NO_ENS.reduce(async (fetchedTokens, url) => {
         const tokensSoFar = await fetchedTokens
-        console.log(url)
         const newTokens = await getTokenList(url)
         if (newTokens?.tokens) {
           return Promise.resolve([...tokensSoFar, ...newTokens.tokens])

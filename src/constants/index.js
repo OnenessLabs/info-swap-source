@@ -33,6 +33,10 @@ export const TOKEN_BLACKLIST = [
   '0x3d7e683fc9c86b4d653c9e47ca12517440fad14e',
   '0xfae9c647ad7d89e738aba720acf09af93dc535f7',
   '0x7296368fe9bcb25d3ecc19af13655b907818cc09',
+
+  // onet
+  // '0x9bf054279893c80c84cd8c74c3be299bab9c8a29',
+  // '0xbC3f1A7203b7f7EF3d6Fd1Da2d702dB952207825',
 ]
 
 // pair blacklist
@@ -41,6 +45,9 @@ export const PAIR_BLACKLIST = [
   '0x97cb8cbe91227ba87fc21aaf52c4212d245da3f8',
   '0x1acba73121d5f63d8ea40bdc64edb594bd88ed09',
   '0x7d7e813082ef6c143277c71786e5be626ec77b20',
+
+  // '0x9bf054279893c80c84cd8c74c3be299bab9c8a29',
+  // '0xbC3f1A7203b7f7EF3d6Fd1Da2d702dB952207825',
 ]
 
 // warnings to display if page contains info about blocked token
@@ -64,6 +71,9 @@ export const TRACKED_OVERRIDES_PAIRS = [
   '0xe1573b9d29e2183b1af0e743dc2754979a40d237',
   '0x45804880de22913dafe09f4980848ece6ecbaf78',
   '0x709f7b10f22eb62b05913b59b92ddd372d4e2152',
+
+  // '0x9bf054279893c80c84cd8c74c3be299bab9c8a29',
+  // '0xbC3f1A7203b7f7EF3d6Fd1Da2d702dB952207825',
 ]
 
 // tokens that should be tracked but arent due to lag in subgraph

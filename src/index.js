@@ -10,6 +10,7 @@ import PairDataContextProvider, { Updater as PairDataContextUpdater } from './co
 import ApplicationContextProvider from './contexts/Application'
 import UserContextProvider from './contexts/User'
 import App from './App'
+// import { debugContextDevtool } from 'react-context-devtool'
 
 // initialize GA
 const GOOGLE_ANALYTICS_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_ID
@@ -26,8 +27,8 @@ if (typeof GOOGLE_ANALYTICS_ID === 'string') {
     customBrowserType: !isMobile
       ? 'desktop'
       : 'web3' in window || 'ethereum' in window
-      ? 'mobileWeb3'
-      : 'mobileRegular',
+        ? 'mobileWeb3'
+        : 'mobileRegular',
   })
 } else {
   ReactGA.initialize('test', { testMode: true, debug: true })
@@ -59,6 +60,8 @@ function Updaters() {
   )
 }
 
+const container = document.getElementById('root')
+
 ReactDOM.render(
   <ContextProviders>
     <Updaters />
@@ -69,5 +72,12 @@ ReactDOM.render(
       </>
     </ThemeProvider>
   </ContextProviders>,
-  document.getElementById('root')
+  container
 )
+
+// debugContextDevtool(container, {
+//   debugReducer: true,
+//   debugContext: true,
+//   disable: false,
+//   disableAutoMode: false,
+// })
